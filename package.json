@@ -21,6 +21,10 @@
       "url": "https://github.com/jimmyhillis/node-epub/blob/master/LICENSE"
     }
   ],
+  "main": "lib/epub.js",
+  "directories": {
+    "lib": "."
+  },
   "engines": {
     "node": "*"
   },
