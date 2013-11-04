@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xml:lang="en" xmlns:epub="http://www.idpf.org/2007/ops" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Table Of Contents</title>
+        <meta charset="UTF-8"/>
+        <meta name="EPB-UUID" content="{{uuid}}"/>
+    </head>
+    <body>
+        <nav epub:type="toc" id="toc">
+            <ol>
+                {{#each chapters}}
+                <li>
+                    <a href="{{name}}"><span>{{title}}</span></a>
+                </li>
+                {{/each}}
+            </ol>
+        </nav>
+    </body>
+</html>

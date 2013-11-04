@@ -1,0 +1,35 @@
+{
+  "name": "node-epub",
+  "description": "Generate valid ePub 2/3 documents from your own assets.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jimmyhillis/node-epub",
+  "author": {
+    "name": "Jimmy Hillis",
+    "email": "jimmy@hillis.me",
+    "url": "http://jimmy.hillis.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jimmyhillis/node-epub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jimmyhillis/node-epub/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jimmyhillis/node-epub/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "archiver": "~0.4.10",
+    "handlebars": "~1.1.0",
+    "node-uuid": "~1.4.1"
+  },
+  "keywords": [
+    "epub"
+  ]
+}

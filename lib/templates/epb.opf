@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package unique-identifier="BookId" version="3.0" xmlns="http://www.idpf.org/2007/opf">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
+              xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:title>{{title}}</dc:title>
+        <dc:language>{{lang}}</dc:language>
+        <dc:identifier id="BookId">{{uuid}}</dc:identifier>
+        <dc:creator id="creator">{{author}}</dc:creator>
+        <dc:subject>{{genre}}</dc:subject>
+        <dc:description>{{description}}</dc:description>
+        <dc:date>{{created}}</dc:date>
+        <meta property="dcterms:modified">{{modified}}</meta>
+    </metadata>
+    <manifest>
+        <item id="toc" media-type="application/x-dtbncx+xml" href="epb.ncx" />
+        <item id="htmltoc" properties="nav" media-type="application/xhtml+xml" href="toc.xhtml"/>
+        {{#each chapters}}
+            <item id="{{name}}"
+                  media-type="{{mimetype}}"
+                  href="{{name}}" />
+        {{/each}}
+    </manifest>
+    <spine toc="toc">
+        <itemref idref="htmltoc" linear="yes" />
+        {{#each chapters}}
+            <itemref idref="{{name}}" linear="yes" />
+        {{/each}}
+    </spine>
+    <guide>
+        {{#each chapters}}
+            <reference type="text" title="{{title}}" href="{{name}}" />
+        {{/each}}
+    </guide>
+</package>
