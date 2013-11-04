@@ -5,10 +5,10 @@
         <dc:title>{{title}}</dc:title>
         <dc:language>{{lang}}</dc:language>
         <dc:identifier id="BookId">{{uuid}}</dc:identifier>
-        <dc:creator id="creator">{{author}}</dc:creator>
-        <dc:subject>{{genre}}</dc:subject>
-        <dc:description>{{description}}</dc:description>
-        <dc:date>{{created}}</dc:date>
+        {{#if author}}<dc:creator id="creator">{{author}}</dc:creator>{{/if}}
+        {{#if genre}}<dc:subject>{{genre}}</dc:subject>{{/if}}
+        {{#if description}}<dc:description>{{description}}</dc:description>{{/if}}
+        {{#if created}}<dc:date>{{created}}</dc:date>{{/if}}
         <meta property="dcterms:modified">{{modified}}</meta>
     </metadata>
     <manifest>
